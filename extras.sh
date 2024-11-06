@@ -1,8 +1,6 @@
 #!/bin/bash
 [[ "$radarr_eventtype" == "Test" ]] && exit 0
 
-cp -R "$radarr_moviefile_sourcepath" "$radarr_movie_path"
-
 # Check if Featurettes folder exists and copy it if found
 if test -d "$radarr_moviefile_sourcefolder/Featurettes"; then
    cp -R "$radarr_moviefile_sourcefolder/Featurettes" "$radarr_movie_path/Extras"
